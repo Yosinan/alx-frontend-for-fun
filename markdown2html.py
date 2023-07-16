@@ -8,9 +8,10 @@ import os.path
 import re
 import hashlib
 
+
 def convert_markdown_to_html(input_file, output_file):
     if not os.path.isfile(input_file):
-        print('Missing {}'.format(input_file), file=sys.stderr)
+        print(f'Missing {input_file}', file=sys.stderr)
         return 1
 
     with open(input_file) as read:
@@ -45,14 +46,13 @@ def convert_markdown_to_html(input_file, output_file):
                 ordered_num = length - len(ordered)
 
                 if 1 <= heading_num <= 6:
-                    line = '<h{}>{}</h{}>\n'.format(
-                        heading_num, headings.strip(), heading_num)
+                    line = f'<h{heading_num}>{headings.strip()}</h{heading_num}>\n'
 
                 if unordered_num:
                     if not unordered_start:
                         html.write('<ul>\n')
                         unordered_start = True
-                    line = '<li>{}</li>\n'.format(unordered.strip())
+                    line = f'<li>{unordered.strip()}</li>\n'
                 if unordered_start and not unordered_num:
                     html.write('</ul>\n')
                     unordered_start = False
@@ -61,7 +61,7 @@ def convert_markdown_to_html(input_file, output_file):
                     if not ordered_start:
                         html.write('<ol>\n')
                         ordered_start = True
-                    line = '<li>{}</li>\n'.format(ordered.strip())
+                    line = f'<li>{ordered.strip()}</li>\n'
                 if ordered_start and not ordered_num:
                     html.write('</ol>\n')
                     ordered_start = False
