@@ -1,8 +1,15 @@
-#!/bin/python3
+#!/usr/bin/python3
 """ Markdown to HTML """
 import sys
 import os
 import markdown
+
+
+'''
+argv[1] = input file
+argv[2] = output file
+'''
+
 
 if len(sys.argv) < 3:
     sys.stderr.write("Usage: ./markdown2html.py <input_file> <output_file>\n")
