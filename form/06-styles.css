@@ -156,14 +156,14 @@
   }
   
   .button-primary {
-    background-color: var(--color-primary);
     color: var(--color-white);
+    background: var(--color-primary);
   }
 
-    .button-primary:hover {
-        background-color: var(--color-white);
-        color: var(--color-primary);
-    }
+  .button-primary:hover {
+    color: var(--color-primary);
+    background: var(--color-white);
+  }
     
   /* Helpers
       ============================= */
