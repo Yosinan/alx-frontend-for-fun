@@ -1,0 +1,18 @@
+a {
+  color: #91183e;
+  text-decoration: none;
+}
+
+a::before {
+  content: "";
+  width: 0;
+  position: absolute;
+  background-color: #731c37;
+  height: 2.5px;
+  transform: translateY(2.2ex);
+  transition: 0.5s ease-in-out;
+}
+
+a:hover::before {
+  width: 4.7em;
+}
