@@ -1,4 +1,4 @@
-# [Sass](https://sass-lang.com/documentation/at-rules/control/if/) & Scss
+# [Sass & Scss](https://sass-lang.com/documentation/at-rules/control/if/) 
 ## CSS, Front-end, SASS
 
 ![SASS](./sass.jpg)
