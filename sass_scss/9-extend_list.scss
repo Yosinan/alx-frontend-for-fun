@@ -1,35 +1,13 @@
-%shareable {
-	font-size: 12px;
-}
-
 .info {
-	@extend %shareable;
+	font-size: 12px;
 }
 
 .success {
 	color: #00FF00;
-	@extend %shareable;
+	@extend .info;
 }
 
 .warning {
 	color: #FF0000;
-	@extend %shareable;
+	@extend .info;
 }
-
-
-
-/* another possible way can be like this
-.info {
-  font-size: 12px;
-}
-
-.success {
-  @extend .info;
-  color: #00FF00;
-}
-
-.warning {
-  @extend .info;
-  color: #FF0000;
-}
-*/
